@@ -7,6 +7,10 @@
   "source": "git@github.com:eohtake/javaplugin64.git",
   "project_page": "https://github.com/eohtake/javaplugin64",
   "issues_url": "https://github.com/eohtake/javaplugin64/issues",
+  "dependencies": [
+  
+  ],
+  "data_provider": null,
   "tags": [
     "windows",
     "java",

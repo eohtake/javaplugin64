@@ -1,0 +1,14 @@
+{
+  "Gemfile": "def5afa5414b97d4cf2cb2f224d86783",
+  "README.md": "94cdfebbae2c27f79ba0289073ad8193",
+  "Rakefile": "add253a93bee6b9bfb9422f607f873b9",
+  "examples/init.pp": "06fbbead61955d9bba7c1560405d32a8",
+  "lib/facter/javapluginversion64.rb": "4f7772b82803dc09e1601c8ccab88c4c",
+  "manifests/current_version_message.pp": "5dda2e9224241d55a64b659f2e34725d",
+  "manifests/init.pp": "ff9aa1625b826e7e116b15dfa3da235b",
+  "manifests/params.pp": "1c29649b22a352c7a027ebf51d7d415b",
+  "manifests/uninstall.pp": "e152e3f50eb6ba77f9f0a85665de4a6c",
+  "metadata.json": "066827c84d7b3bba357279050de46e4b",
+  "spec/classes/init_spec.rb": "92a384020c078313f1bcd36bef1d9eb2",
+  "spec/spec_helper.rb": "74085ad4d8ee01166015b10a843ee959"
+}
