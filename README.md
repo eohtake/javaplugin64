@@ -15,22 +15,22 @@
 
 ## Overview
 
-This module installs the most recent version of Java Plugin (JRE) 64 bits. Version 8 update 66. 
-It also removes some older versions, as for example version 8 update 65. 
+This module installs the most recent version of Java Plugin (JRE) 64 bits. Version 8 update 66.
+It also removes some older versions, as for example version 8 update 65.
 
 ## Module Description
 
 The module javaplugin64 solves the installation challenge that Java Runtime Environment presents to us.
-To install a Java Plugin is pretty simple, however, it doesn't remove the older versions automatically, which makes versions os java to pile up in the system.
+To install a Java Plugin is pretty simple, however, it doesn't remove the older versions automatically, which makes versions of java to pile up in the system.
 
 To make things even more challenging, to silent uninstall Java Plugins, we must provide the uninstall string found in Windows Registry and for each version the string changes!
 We needed a way to find out first, what was the version current installed in the system, and then provide an uninstall string if this version is meant to be uninstalled.
 
 To solve this problem a facter fact was created, running against the registry and collecting versions of Java Plugin installed in a system.
 
-The main class `javaplugin64` installs the latest Java version informed in the params.
+The main class `javaplugin64` installs the latest Java version informed in the parameters.
 
-After the installation, if another version of Java Plugin is found, the uninstaller class `javaplugin64::uninstall` is called which has its params fed by a case statement in the `javaplugin64::params` class.
+After the installation, if another version of Java Plugin is found, the uninstaller class `javaplugin64::uninstall` is called which has its parameters fed by a case statement in the `javaplugin64::params` class.
 
 Then, 2 messages will be issued, one stating the version that was uninstalled, and another saying the recent version was found in the system.
 
@@ -40,11 +40,11 @@ Then, 2 messages will be issued, one stating the version that was uninstalled, a
 
 * It will create a new facter fact in the system exposing versions of Java Plugin 64-Bits installed in the system.
 
-* It installs a Java Plugin 64 bits in the system. 
+* It installs a Java Plugin 64 bits in the system.
 
-* It will uninstall a Java Plugin version that matches the params found in `javaplugin64::params`
+* It will uninstall a Java Plugin version that matches the parameters found in `javaplugin64::params`
 
-* It might overwrite a Java Plugin configuration in a system. For example security prompts and turning on updates notification. 
+* It might overwrite a Java Plugin configuration in a system. For example security prompts and turning on updates notification.
 
 ### Setup Requirements
 
@@ -52,7 +52,7 @@ Then, 2 messages will be issued, one stating the version that was uninstalled, a
 
 * If the installer source comes from a network path, make sure the systems running the Puppet agent have full access to it.
 
-* If you need to uninstall a version that is not listed in the classes available, add it to the `javaplugin64::params` class. 
+* If you need to uninstall a version that is not listed in the classes available, add it to the `javaplugin64::params` class.
 
 * If you need to install a different version of Java, change the main class `javaplugin64`
 
@@ -63,7 +63,7 @@ Then, 2 messages will be issued, one stating the version that was uninstalled, a
 * Or after copying the module to your module path, classify your nodes on your the `site.pp file`.
 
 * Put the installer on the folder `C:\apps\plugins\java64\jre-8u66-windows-x64.exe`.
- 
+
 * Or provide your installer source path overriding `$javaplugin64::params::source_path` param.
 
 ## Usage
@@ -81,7 +81,7 @@ node 'default' {
 }
 ```
 
-* Do you have a different installer source folder or file name? No problem! Override the `$javaplugin64::params::source_path` param:
+* Do you have a different installer source folder or file name? No problem! Override the `$javaplugin64::params::source_path` parameter:
 
 ```puppet
 node 'default' {
@@ -91,7 +91,7 @@ node 'default' {
 }
 ```
 
-* When a new version of Java Plugin is available, (or the silent install switche changes) you just need to override the parameters:
+* When a new version of Java Plugin is available, (or the silent install switch changes) you just need to override the parameters:
 
 ```puppet
 node 'default' {
@@ -113,7 +113,7 @@ node 'default' {
 
 ### When to expand
 
-* You will want to expand this module when a new version of Java Plugin is released or when you want to uninstall a version that is not present in the `javaplugin64::params` class. 
+* You will want to expand this module when a new version of Java Plugin is released or when you want to uninstall a version that is not present in the `javaplugin64::params` class.
 
 * To make this module capable of removing another Java Plugin version, find out the uninstall string for the version you want to remove, then add it to the case statement at `javaplugin64::params`
  It is not possible to override the parameters for the uninstaller, since it is only executed after an include on the `javaplugin64` class.
@@ -130,7 +130,7 @@ class javaplugin64::params {
     }
   }
 }
-``` 
+```
 
 ## Reference
 
