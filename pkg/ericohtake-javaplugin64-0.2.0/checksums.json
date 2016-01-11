@@ -8,7 +8,7 @@
   "manifests/init.pp": "ff9aa1625b826e7e116b15dfa3da235b",
   "manifests/params.pp": "1c29649b22a352c7a027ebf51d7d415b",
   "manifests/uninstall.pp": "e152e3f50eb6ba77f9f0a85665de4a6c",
-  "metadata.json": "651e15ba0babf6c4564b127377932946",
+  "metadata.json": "a2cdade921d6ed878b252f571b0313e9",
   "spec/classes/init_spec.rb": "92a384020c078313f1bcd36bef1d9eb2",
   "spec/spec_helper.rb": "74085ad4d8ee01166015b10a843ee959"
 }
