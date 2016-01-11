@@ -1,0 +1,14 @@
+{
+  "name": "avaplugin64",
+  "version": "0.1.0",
+  "author": "Eric Ohtake",
+  "summary": "This module installs and uninstall Java Plugin 64-Bits",
+  "license": "Apache 2.0",
+  "source": "git@github.com:eohtake/javaplugin64.git",
+  "project_page": "git@github.com:eohtake/javaplugin64.git",
+  "issues_url": "git@github.com:eohtake/javaplugin64.git",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
