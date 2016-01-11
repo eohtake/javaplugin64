@@ -1,5 +1,5 @@
 {
-  "name": "avaplugin64",
+  "name": "ericohtake-javaplugin64",
   "version": "0.1.0",
   "author": "Eric Ohtake",
   "summary": "This module installs and uninstall Java Plugin 64-Bits",
@@ -11,4 +11,3 @@
     {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
   ]
 }
-
