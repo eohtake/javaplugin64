@@ -7,9 +7,6 @@
   "source": "git@github.com:eohtake/javaplugin64.git",
   "project_page": "https://github.com/eohtake/javaplugin64",
   "issues_url": "https://github.com/eohtake/javaplugin64/issues",
-  "dependencies": [
-    {"name": "puppetlabs/stdlib", "version_requirement": ">= 1.0.0 < 5.0.0"}
-  ],
   "operatingsystem_support": [
     {
       "operatingsystem": "Windows",
@@ -19,5 +16,8 @@
         "10"
       ]
     }
+  ],
+  "dependencies": [
+    {"name":"puppetlabs/stdlib","version_requirement":">= 1.0.0 < 5.0.0"}
   ]
 }
