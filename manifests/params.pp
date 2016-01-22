@@ -12,14 +12,18 @@ class javaplugin64::params {
   $current_version_message = 'The most recent version of Java is installed!'
 
   case $::javaplugin64 {
-    /\.*Java 8 Update 60/: {
-      $uninstall_string  = '{26A24AE4-039D-4CA4-87B4-2F86418060FF}'
-      $uninstall_message = 'The version 8 update 60 was uninstalled'
+    /\.*Java 8 Update 66/: {
+      $uninstall_string  = '{26A24AE4-039D-4CA4-87B4-2F86418066FF}'
+      $uninstall_message = 'The version 8 update 66 was uninstalled'
     }
 
     /\.*Java 8 Update 65/: {
       $uninstall_string  = '{26A24AE4-039D-4CA4-87B4-2F86418065FF}'
       $uninstall_message = 'The version 8 update 65 was uninstalled'
+    }
+    /\.*Java 8 Update 60/: {
+      $uninstall_string  = '{26A24AE4-039D-4CA4-87B4-2F86418060FF}'
+      $uninstall_message = 'The version 8 update 60 was uninstalled'
     }
 
     /\.*Java 8 Update 51/: {
