@@ -1,8 +1,8 @@
 {
   "name": "ericohtake-javaplugin64",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "author": "Eric Ohtake",
-  "summary": "This module installs and uninstall Java Plugin 64-Bits",
+  "summary": "This module manages Java Plugin 64-Bits (JRE)",
   "license": "Apache-2.0",
   "source": "git@github.com:eohtake/javaplugin64.git",
   "project_page": "https://github.com/eohtake/javaplugin64",

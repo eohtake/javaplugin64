@@ -34,6 +34,8 @@ class javaplugin64 (
     # If the current version of Java Plugin is not alone in the facter fact,
     # it means that there is an old version of it in the system that must be
     # uninstalled, hence the uninstall class include.
+    # Be careful though, since if the system has a newer version installed by
+    # hand, this class will be called and my cause an error.
 
     if $pkg_name != $::javaplugin64 {
       include javaplugin64::uninstall

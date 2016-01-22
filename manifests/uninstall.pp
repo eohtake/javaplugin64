@@ -22,7 +22,7 @@ class javaplugin64::uninstall (
   }
 
   case $::javaplugin64 {
-    /\.*Java 8 Update 66/: { include javaplugin64::current_version_message }
+    /\.*Java 8 Update 71/: { include javaplugin64::current_version_message }
     default: {}
   }
 }
