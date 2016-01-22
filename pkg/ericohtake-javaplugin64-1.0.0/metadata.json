@@ -1,0 +1,24 @@
+{
+  "name": "ericohtake-javaplugin64",
+  "version": "1.0.0",
+  "author": "Eric Ohtake",
+  "summary": "This module manages Java Plugin 64-Bits (JRE)",
+  "license": "Apache-2.0",
+  "source": "git@github.com:eohtake/javaplugin64.git",
+  "project_page": "https://github.com/eohtake/javaplugin64",
+  "issues_url": "https://github.com/eohtake/javaplugin64/issues",
+  "dependencies": [
+    {"name":"puppetlabs/stdlib","version_requirement":">= 1.0.0 < 5.0.0"}
+  ],
+  "data_provider": null,
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Windows",
+      "operatingsystemrelease": [
+        "7",
+        "8",
+        "10"
+      ]
+    }
+  ]
+}

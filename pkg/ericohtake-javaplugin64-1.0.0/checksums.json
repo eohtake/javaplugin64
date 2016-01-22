@@ -1,0 +1,15 @@
+{
+  "CHANGELOG.md": "c7ac08210be15670624648f2466436f9",
+  "Gemfile": "def5afa5414b97d4cf2cb2f224d86783",
+  "README.md": "678a6b56acc3a07b92e62580b495b7df",
+  "Rakefile": "add253a93bee6b9bfb9422f607f873b9",
+  "examples/init.pp": "06fbbead61955d9bba7c1560405d32a8",
+  "lib/facter/javapluginversion64.rb": "4f7772b82803dc09e1601c8ccab88c4c",
+  "manifests/current_version_message.pp": "b377dd549adb1721003d7a3eea1ceb4f",
+  "manifests/init.pp": "9a6e8e2fd5d0ce46d3547cf5163e004c",
+  "manifests/params.pp": "db3625b52e32234b9e0d1dbc670261d3",
+  "manifests/uninstall.pp": "8d3e2375681e424733a2037423c827ea",
+  "metadata.json": "3520cd9af805077d7b857af844c43972",
+  "spec/classes/init_spec.rb": "92a384020c078313f1bcd36bef1d9eb2",
+  "spec/spec_helper.rb": "74085ad4d8ee01166015b10a843ee959"
+}
