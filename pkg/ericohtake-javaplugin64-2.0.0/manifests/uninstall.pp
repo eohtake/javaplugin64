@@ -1,3 +1,12 @@
+# Class: javaplugin64::uninstall
+#
+# Uninstalls Java Plugin 64 if a version if provided in javaplugin64::params
+#
+# It will pass an uninstall string to the msiexe command.
+#
+# The message confirming the uninstall will be issued.
+# One more check is done issuing that sys is also updated with newest version.
+
 class javaplugin64::uninstall (
   $uninstall_string  = $javaplugin64::params::uninstall_string,
   $uninstall_message = $javaplugin64::params::uninstall_message,
@@ -13,7 +22,7 @@ class javaplugin64::uninstall (
   }
 
   case $::javaplugin64 {
-    /\.*Java 8 Update 66/: { include javaplugin64::current_version_message }
+    /\.*Java 8 Update 73/: { include javaplugin64::current_version_message }
     default: {}
   }
 }

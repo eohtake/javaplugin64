@@ -16,9 +16,9 @@
 
 ## Overview
 
-This module installs the most recent version of Java Plugin 64-bits (JRE).  `Version 8 update 71.`
+This module installs the most recent version of Java Plugin 64-bits (JRE).  `Version 8 update 73.`
 
-It also removes some older versions, as for example version 8 update 65. To see the full list, please refer to the reference section at the end of this page.
+It also removes some older versions, as for example version 8 update 71 and 66. To see the full list, please refer to the reference section at the end of this page.
 
 ## Module Description
 
@@ -80,7 +80,7 @@ Then, 2 messages will be issued, one stating the version that was uninstalled, a
 # C:\ProgramData\PuppetLabs\code\environments\production\manifests\site.pp
 #
 # Default installer folder and most recent Java Plugin name:
-# C:\apps\plugins\java64\jre-8u71-windows-x64.exe
+# C:\apps\plugins\java64\jre-8u73-windows-x64.exe
 
 node 'default' {
    class { 'javaplugin64': }
@@ -92,7 +92,7 @@ node 'default' {
 ```puppet
 node 'default' {
   class { 'javaplugin64':
-    source_path => 'C:\users\you\desktop\jre-8u71-windows-x64.exe',
+    source_path => 'C:\users\you\desktop\jre-8u73-windows-x64.exe',
   }
 }
 ```
@@ -128,8 +128,8 @@ node 'default' {
 
 ```puppet
 class javaplugin64::params {
-  $pkg_name                = 'Java 8 Update 71 (64-bit)'
-  $source_path             = 'C:\apps\plugins\java64\jre-8u71-windows-x64.exe'
+  $pkg_name                = 'Java 8 Update 73 (64-bit)'
+  $source_path             = 'C:\apps\plugins\java64\jre-8u73-windows-x64.exe'
   $install_options         = '/s'
   $current_version_message = 'The most recent version of Java is installed!'
 
@@ -158,7 +158,7 @@ class javaplugin64::params {
 
 * Version installed by this module:
 
-  - Java Plugin 8 Update 71 (64-bit)
+  - Java Plugin 8 Update 73 (64-bit)
 
 
 * Versions uninstalled by this module:
@@ -188,6 +188,7 @@ class javaplugin64::params {
 ## Limitations
 
 - This module manages only Java Plugin 64-Bits versions.
+- In some browsers or applications that run in 32-bits, you will need to install the 32 bits version of Java manually.
 
 ## Development
 
