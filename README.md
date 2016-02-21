@@ -1,5 +1,5 @@
 # Java Plugin 64 - Install Module for Puppet
-[![Puppet Forge](https://img.shields.io/badge/puppetforge-1.0.0-blue.svg)](https://forge.puppetlabs.com/ericohtake/javaplugin64)
+[![Puppet Forge](https://img.shields.io/badge/puppetforge-2.0.0-blue.svg)](https://forge.puppetlabs.com/ericohtake/javaplugin64)
 
 #### Table of Contents
 
