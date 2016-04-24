@@ -1,3 +1,12 @@
+## 2016-04-24 Release 8.91.0
+### Summary
+
+#### Features
+
+- Added installation of new Java Plugin 8 Update 91 (64-bit)
+
+- Added string to uninstall outdated Java Plugin 8 Update 77 (64-bit)
+
 ## 2016-04-09 Release 8.77.0
 ### Summary
 
