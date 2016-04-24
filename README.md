@@ -1,5 +1,5 @@
 # Java Plugin 64 - Install Module for Puppet
-[![Puppet Forge](https://img.shields.io/badge/puppetforge-8.77.0-blue.svg)](https://forge.puppetlabs.com/ericohtake/javaplugin64)
+[![Puppet Forge](https://img.shields.io/badge/puppetforge-8.91.0-blue.svg)](https://forge.puppetlabs.com/ericohtake/javaplugin64)
 
 #### Table of Contents
 
@@ -16,9 +16,9 @@
 
 ## Overview
 
-This module installs the most recent version of Java Plugin 64-bits (JRE).  `Version 8 update 77.`
+This module installs the most recent version of Java Plugin 64-bits (JRE).  `Version 8 update 91.`
 
-It also removes some older versions, as for example version 8 update 73. To see the full list, please refer to the reference section at the end of this page.
+It also removes some older versions, as for example version 8 update 77. To see the full list, please refer to the reference section at the end of this page.
 
 ## Module Description
 
@@ -56,11 +56,11 @@ Then, 2 messages will be issued, one stating the version that was uninstalled, a
 
 * Since this module depends 100% on the facter fact `$::javaplugin64` *pluginsync* must be enabled.
 
+* For local installation, you will need to place the installer at `C:\apps\plugins\java64\` or override the parameter `javaplugin64::params::source_path`
+
 * If the installer source comes from a network path, make sure the systems running the Puppet agent have full access to it.
 
 * If you need to uninstall a version that is not listed in the classes available, add it to the `javaplugin64::params` class.
-
-* If you need to uninstall a different version of Java, not covered by this module, change/add it to the params class `javaplugin64::params`
 
 ### Beginning with javaplugin64
 
@@ -80,7 +80,7 @@ Then, 2 messages will be issued, one stating the version that was uninstalled, a
 # C:\ProgramData\PuppetLabs\code\environments\production\manifests\site.pp
 #
 # Default installer folder and most recent Java Plugin name:
-# C:\apps\plugins\java64\jre-8u77-windows-x64.exe
+# C:\apps\plugins\java64\jre-8u91-windows-x64.exe
 
 node 'default' {
    class { 'javaplugin64': }
@@ -92,7 +92,7 @@ node 'default' {
 ```puppet
 node 'default' {
   class { 'javaplugin64':
-    source_path => 'C:\users\you\desktop\jre-8u77-windows-x64.exe',
+    source_path => 'C:\users\you\desktop\jre-8u91-windows-x64.exe',
   }
 }
 ```
@@ -102,16 +102,16 @@ node 'default' {
 ```puppet
 node 'default' {
   class { 'javaplugin64':
-    pkg_name        => 'Java 9 Update 77 (64-bit)',
-    source_path     => 'C:\apps\plugins\java64\jre-9u77-windows-x64.exe',
+    pkg_name        => 'Java 9 Update 91 (64-bit)',
+    source_path     => 'C:\apps\plugins\java64\jre-9u91-windows-x64.exe',
     install_options => "/q",
   }
 }
 ```
 
-- For example, run `puppet apply C:\ProgramData\PuppetLabs\code\environments\production\manifests` to install Java during tests and then follow the workflow to test with your ENC *before* sending to production.
+- For example, run `puppet apply C:\ProgramData\PuppetLabs\code\environments\production\manifests` to install Java during tests and then follow the workflow to test with your ENC *before* deploying into production.
 
-- This module has been tested on Foreman and Puppet Enterprise executed well on 200+ nodes running Windows 7 and Windows 10
+- This module has been tested on Foreman and Puppet Enterprise executed well on 300+ nodes running Windows 7 and Windows 10
 
 - You may want to remove some lines of code from the `javaplugin64::params` class that are not relevant to your infrastructure. For example, versions of Java that you don't have.
 
@@ -128,14 +128,14 @@ node 'default' {
 
 ```puppet
 class javaplugin64::params {
-  $pkg_name                = 'Java 8 Update 77 (64-bit)'
-  $source_path             = 'C:\apps\plugins\java64\jre-8u77-windows-x64.exe'
+  $pkg_name                = 'Java 8 Update 91 (64-bit)'
+  $source_path             = 'C:\apps\plugins\java64\jre-8u91-windows-x64.exe'
   $install_options         = '/s'
   $current_version_message = 'The most recent version of Java is installed!'
 
   case $::javaplugin64 {
-    /\.*Java 8 Update 60/: {
-      $uninstall_string  = '{26A24AE4-039D-4CA4-87B4-2F86418060FF}'
+    /\.*Java 8 Update 77/: {
+      $uninstall_string  = '{26A24AE4-039D-4CA4-87B4-2F86418077FF}'
       $uninstall_message = 'The version 8 update 60 was uninstalled'
     }
 
@@ -158,7 +158,7 @@ class javaplugin64::params {
 
 * Version installed by this module:
 
-  - Java Plugin 8 Update 77 (64-bit)
+  - Java Plugin 8 Update 91 (64-bit)
 
 
 * Versions uninstalled by this module:
@@ -188,7 +188,7 @@ class javaplugin64::params {
 ## Limitations
 
 - This module manages only Java Plugin 64-Bits versions.
-- In some browsers or applications that run in 32-bits, you will need to install the 32 bits version of Java manually or adapt this module to work as required.
+- You cannot override parameters for the uninstaller.
 
 ## Development
 
