@@ -1,6 +1,6 @@
 {
   "name": "ericohtake-javaplugin64",
-  "version": "8.77.0",
+  "version": "8.91.0",
   "author": "Eric Ohtake",
   "summary": "This module manages Java Plugin 64-Bits (JRE)",
   "license": "Apache-2.0",
