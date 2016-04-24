@@ -6,12 +6,17 @@
 #
 
 class javaplugin64::params {
-  $pkg_name                = 'Java 8 Update 77 (64-bit)'
-  $source_path             = 'C:\apps\plugins\java64\jre-8u77-windows-x64.exe'
+  $pkg_name                = 'Java 8 Update 91 (64-bit)'
+  $source_path             = 'C:\apps\plugins\java64\jre-8u91-windows-x64.exe'
   $install_options         = '/s'
   $current_version_message = 'The most recent version of Java is installed!'
 
   case $::javaplugin64 {
+    /\.*Java 8 Update 77/: {
+      $uninstall_string  = '{26A24AE4-039D-4CA4-87B4-2F86418077F0}'
+      $uninstall_message = 'The version 8 update 77 was uninstalled'
+    }
+
     /\.*Java 8 Update 73/: {
       $uninstall_string  = '{26A24AE4-039D-4CA4-87B4-2F86418073F0}'
       $uninstall_message = 'The version 8 update 73 was uninstalled'
